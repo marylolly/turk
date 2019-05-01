@@ -1,0 +1,124 @@
+/*!
+ * Start Bootstrap - Modern Business (https://startbootstrap.com/template-overviews/modern-business)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
+ */
+
+.navbar1 {
+	background: #B32548;
+
+background: linear-gradient(50deg, #B32548 0%, #8FD3F4 100%);
+
+background: -webkit-linear-gradient(50deg, #B32548 0%, #8FD3F4 100%);
+
+background: -moz-linear-gradient(50deg, #B32548 0%, #8FD3F4 100%);
+
+background: -o-linear-gradient(50deg, #B32548 0%, #8FD3F4 100%);
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='B32548', endColorstr='#8FD3F4',GradientType=1 );
+	height: 150px;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.topmenu1 {
+
+    position: absolute;
+    top: 90px;
+    list-style: none;
+    padding: 0;
+    margin: 0 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    z-index: 1000;
+
+}
+
+   
+.topmenu1 a {
+	text-transform: uppercase;
+    font-size: 0.8em;
+    color: black;
+    display: block;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+    font-weight: 600;
+}
+
+.topmenu1 a:hover {
+    
+    text-decoration: underline;
+
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: justify;
+}
+
+
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+.card-footer {
+    padding: .75rem 1.25rem;
+    background-color: rgba(0,0,0,.03);
+    border-top: 1px solid rgba(0,0,0,.125);
+    margin-bottom: 30px;
+}
+
+.justify-content-center {
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+}
+.pagination {
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+}
+
+.title {
+font-size: 30px;
+font-weight: 500;
+}
+
+
+.pb-5, .py-5 {
+    padding-bottom: 3rem !important;
+    padding-top: 3rem !important;
+    }
+
+#sil {
+	opacity: 0.2;
+    
+}    

@@ -1,0 +1,30 @@
+
+// Fonts
+// @import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// // Variables
+// @import 'variables';
+
+// Bootstrap
+$clr_yellow: #f3d323;
+
+
+@import '~bootstrap/scss/bootstrap';
+.navbar-main{
+    background-color: $clr_yellow !important;
+    a{
+        color: black;
+        &.active{
+            background-color: darken($clr_yellow, 10%);
+            font-weight: bold;
+        }
+    }
+}
+.main-content{
+   min-height: 400px;
+   padding-top: 100px;
+}
+// .navbar-laravel {
+//   background-color: #fff;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+// }
