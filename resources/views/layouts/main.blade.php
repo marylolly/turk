@@ -60,22 +60,22 @@
 
 
 <div class="col-md-12">
-<h2>Интересное</h2>
+<h2>Публикации</h2>
 <hr>
 </div>
     <div class="row">
     @foreach($records as $record)
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-                 <a href="#"><img class="card-img-top" class="product" src="{{asset('media/img/nophoto.jpg')}}"></a>
+                 <a href="{{$record->alias}}"><img class="card-img-top" class="product" src="{{$record->preview_url}}"></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">{{$record->title}}</a>
+              <a href="{{$record->alias}}">{{$record->title}}</a>
             </h4>
             <p class="card-text">{{$record->description}}</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
+            <a href="{{$record->alias}}" class="btn btn-primary">Learn More</a>
           </div>
         </div>
       </div>

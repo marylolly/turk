@@ -32,4 +32,8 @@ class News extends Model
     public function getDetailUrlAttribute(){
         return '/image/detail/'.str_replace('/images/', '', $this->image);
     }
+
+    public function comments(){
+        return $this->hasMany(Comment::class,'article_id','id');
+    }
 }

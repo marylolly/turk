@@ -50,3 +50,6 @@ Route::resource('news', 'NewsController');
 Route::resource('categories', 'CategoryController');
 
 // Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::post('/comments/add','CommentsController@addComment')->name('comments.add');

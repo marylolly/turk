@@ -32,8 +32,24 @@ $breadcrumbs['/'.$record->alias]=$record->title;
 
       {!!$record->content!!}
     <hr>
+    <br><br>
+@foreach($comments as $comment)
+<p>{{$comment->user}}</p>
+<p>{{$comment->created_at->format('d-m-Y')}}</p>
+<p>{{$comment->comment}}</p>
+@endforeach
+<hr>
+<br><br>
+<form method="post" action="{!!route('comments.add')!!}">
+    {!!csrf_field()!!}
+    Никнейм<br>
+    <input type="text" name="user"><br><br>
+    <input type="hidden" value="{{$record->id}}" name="article_id">
+    <p>Комментарий:</p>
+    <textarea class="form-control" name="comment">    </textarea><br>
+    <button type="submit" class="btn btn-success">Добавить комментарий</button>
+</form>
 
 </div> <!-- /container -->
-
 
 @endsection

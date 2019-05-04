@@ -11,16 +11,14 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>Дивная Турция</title>
-  
-    
+
   <link rel="stylesheet" type="text/css" href="{{asset('media/css/style.css')}}"/>
+
   <!-- Bootstrap core CSS -->
   <link href="{{asset('media/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+
   <!-- Custom styles for this template -->
   <link href="{{asset('media/css/sidebar.css')}}" rel="stylesheet">
-
-
-   
 
 </head>
 
@@ -57,7 +55,7 @@
       <!-- Sidebar Column -->
       <div class="col-lg-3 mb-4">
       <br><br>
-    
+         @include('layouts.left-menu')
       </div>
       <!-- Content Column -->
       <div class="col-lg-9 mb-4">
@@ -77,7 +75,6 @@
 </div>
 </div>
 
- 
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">

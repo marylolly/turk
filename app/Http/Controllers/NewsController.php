@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use App\News;
 use App\Category;
+
+
+
 // use Input;
 class NewsController extends Controller
 {
@@ -33,7 +36,7 @@ class NewsController extends Controller
         }else{
             $records = News::where('category_id',$category_id)->orderBy('updated_at', 'desc')->paginate();
         }
-        
+ 
         // dd($records);
         // точка разделитель каталогов в папке views
         return view('news.index',['records'=>$records,'categories'=>$this->getCategories($category_id), 'category_id'=>$category_id]);

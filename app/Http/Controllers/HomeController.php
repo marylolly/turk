@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\News;
 
+
 class HomeController extends Controller
 {
         /**
@@ -26,16 +27,24 @@ class HomeController extends Controller
             compact('rec')
         );
     }
-
-    
+   
     
     public function show(){
        
         $alias = request()->path();
          // dd($alias);
         $record = News::where('alias',$alias)->first();
+
+        $comments = $record->comments()->get();
+
+
+  
+
+
+
         return view('home.show',[
             'record'=>$record,
+            'comments' => $comments,
             'categories'=>$this->getCategories($record->category_id)
         ]);
     }
@@ -48,6 +57,8 @@ class HomeController extends Controller
         if(empty($record)){
             abort(404);
         }
+
+
         return view('home.category',[
             'record'=>$record,
             'news'=> $record->news()->paginate(5), // получение связанных новостей
@@ -78,6 +89,5 @@ class HomeController extends Controller
         });
     }
 
-    
 
 }
